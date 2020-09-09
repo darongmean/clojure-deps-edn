@@ -71,7 +71,12 @@
   ;; - OpenJDK 8 or 11 -- use :cognitect-rebl-java11
 
   :cognitect-rebl-java8
-  {:extra-deps {com.cognitect/rebl {:mvn/version "0.9.241"}}
+  {:extra-deps {com.cognitect/rebl {:mvn/version "0.9.241"}
+                ;; deps for file datafication (0.9.149 or later)
+                org.clojure/core.async {:mvn/version "0.4.490"}
+                org.clojure/data.csv   {:mvn/version "0.1.4"}
+                org.clojure/data.json  {:mvn/version "0.2.3"}
+                org.yaml/snakeyaml     {:mvn/version "1.23"}}
    :main-opts  ["-m" "cognitect.rebl"]}
 
 
@@ -81,7 +86,12 @@
                 org.openjfx/javafx-controls {:mvn/version "15-ea+6"}
                 org.openjfx/javafx-swing    {:mvn/version "15-ea+6"}
                 org.openjfx/javafx-base     {:mvn/version "15-ea+6"}
-                org.openjfx/javafx-web      {:mvn/version "15-ea+6"}}
+                org.openjfx/javafx-web      {:mvn/version "15-ea+6"}
+                ;; deps for file datafication (0.9.149 or later)
+                org.clojure/core.async {:mvn/version "0.4.490"}
+                org.clojure/data.csv   {:mvn/version "0.1.4"}
+                org.clojure/data.json  {:mvn/version "0.2.3"}
+                org.yaml/snakeyaml     {:mvn/version "1.23"}}
    :main-opts  ["-m" "cognitect.rebl"]}
 
 
